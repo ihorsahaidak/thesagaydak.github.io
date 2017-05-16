@@ -12,7 +12,7 @@
 
 <body>
 <div id="header">
-	<div id="logo"><a href="#">https://github.com/<span style="font-size: 30px;">thesagaydak</span></a></div>
+	<div id="logo"><a href="https://github.com/thesagaydak">https://github.com/<span style="font-size: 30px;">thesagaydak</span></a></div>
 	<ul id="main-menu">
     	<li><a href="#about" class="lang" key="about">About me</a></li>
         <li><a href="#experience" class="lang" key="experience">Experience</a></li>
@@ -80,7 +80,7 @@
     	<h1 class="lang" key="work">Work</h1>
         <div class="top-divider"></div>
         	<div class="content">
-            	<span>Usually, in this tab people puts the icon of websites that they were done and link follow them, But I'm not a designer or frontend developer, and no matter if I'll put here any website you'll never see the code (servers side) of them. That's a way I just leave,
+            	<span class="lang" key="work_text">Usually, in this tab people puts the icon of websites that they done and link follow them, But I'm not a designer or frontend developer, and no matter if I'll put here any website you'll never see the code (servers side) of them. That's a way I just leave,
                 <a href="https://github.com/thesagaydak" target="_blank" style="text-decoration: underline;">the link in my GitHub account</a>, where you can see the example and style of my code.</span>
             </div>
         <div class="bottom-divider"></div>
@@ -105,7 +105,7 @@
                 </div>
                 <div id="social-footer">
                 	<h2 class="lang" key="follow_me">Follow Me:</h2>
-                    <p>Follow me in facebook and subscribe in LinkedIn. <br>
+                    <p class="lang" key="follow_me_text">Follow me in facebook and subscribe in LinkedIn. <br>
                     Leave the email message to me with and questions concern jobs or any subjects. <br>
                     Have a nice day)</p>
                     <ul id="sm-links">
@@ -132,12 +132,14 @@
         'work' : 'Work',
         'connect' : 'Connect',
         'who_am_i' : 'My Name is Igor, and I am a PHP developer',
-        'about_me' : "Hi everyone, thanks for click on my personal website)) I'm the student of CHNU on computer system analysis faculty. Badly love with the web developing and the mobiles and computers technologies. I work for some web company in Chernivtsi as PHP developer from October 2016. I have a knowledge in next technologies: PHP 5.6+, laravel framework 5.3+, SQL, MySql, JS, JQuery, HTML, CSS, Bootstrap, TypeScript, Git, Bash. More info in my LinkedIn account."
+        'about_me' : "Hi everyone thanks for click on my personal website)) <br> I'm the student of CHNU on computer system analysis faculty. Badly love with the web developing and the mobiles and computers technologies. <br>I work for some web company in Chernivtsi as PHP developer from October 2016. <br> I have a knowledge in next technologies: PHP 5.6+, laravel framework 5.3+, SQL, MySql, JS, JQuery, HTML, CSS, Bootstrap, TypeScript, Git, Bash. More info in my LinkedIn account.",
+        'follow_me_text' : "Follow me in facebook and subscribe in LinkedIn. Leave the email message to me with and questions concern jobs or any other subjects. Have a nice day)",
+        'work_text' : "Usually, in this tab people puts the icon of websites that they done and link follow them, But I'm not a designer or frontend developer, and no matter if I'll put here any website you'll never see the code (servers side) of them. That's a way I just leave,<a href='www.github.com/thesagaydak' target='_blank' style='text-decoration: underline;''>the link in my GitHub account</a>, where you can see the example and style of my code."
     },
     'uk' : {
         'name' : "Ім'я",
         'email' : 'Емейл',
-        'message' : 'Повідомлення',
+        'message' : 'Текст',
         'follow_me' : 'Підписатися',
 
         'about' : 'Про мене',
@@ -145,7 +147,9 @@
         'work' : 'Роботи',
         'connect' : "Зв'язок",
         'who_am_i' : 'Мене звати Ігор і я PHP програміст',
-        'about_me' : "Привіт всім, дякую що зайшли на мій сайт)) Я студент ЧНУ ім. Юрія Федьковича кафедри системного аналізу. Цікавлюсь веб-програмуванням та мобільними і компютерними технологіями. Працюю в компанії в місті Чернівці як PHP програміст з жовтня 2016. Працював з такими технологіями як: PHP 5.6+, laravel framework 5.3+, SQL, MySql, JS, JQuery, HTML, CSS, Bootstrap, TypeScript, Git, Bash. Більше інформації в моєму LinkedIn акаунті."
+        'about_me' : "Привіт всім, дякую що зайшли на мій сайт)) Я студент ЧНУ ім. Юрія Федьковича кафедри системного аналізу. <br>Цікавлюсь веб-програмуванням та мобільними і компютерними технологіями. <br>Працюю в компанії в місті Чернівці як PHP програміст з жовтня 2016. <br>Працював з такими технологіями як: PHP 5.6+, laravel framework 5.3+, SQL, MySql, JS, JQuery, HTML, CSS, Bootstrap, TypeScript, Git, Bash. <br>Більше інформації в моєму LinkedIn акаунті.",
+        'follow_me_text' : "Підписуйтесь на мене в Facebook чи LinkedIn. <br> З питань запрошеня до співпраці чи стосовно інших тем пишіть на емейл. <br>Гарного вам дня)",
+        'work_text' : "Зазвичай,в цій вкладці люди вставляють картинки веб-сайтів які вони зробили та посилання на них. Але я не дизайнер чи фронтенд розробник і, не важливо який веб-сайт я тут покажу ви ніколи не побачите коду (серверної частини) цього сайту. Тому я просто залишу,<a href='www.github.com/thesagaydak' target='_blank' style='text-decoration: underline;''>посилання на мій GitHub акаунт</a>, де ви можите подивитися код та стиль його написання."
     }
 };
 
@@ -154,7 +158,7 @@ $(function(){
         var lang = $(this).attr('id');
 
         $('.lang').each(function(index, element){
-            $(this).text(langs[lang][$(this).attr('key')])
+            $(this).html(langs[lang][$(this).attr('key')])
         });
     });
 });
